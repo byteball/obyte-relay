@@ -17,4 +17,4 @@ myWitnesses.readMyWitnesses(function(arrWitnesses){
         return start();
     console.log('will init witnesses', conf.initial_witnesses);
     myWitnesses.insertWitnesses(conf.initial_witnesses, start);
-}, true);
+}, 'ignore');
