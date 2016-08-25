@@ -3,6 +3,14 @@
 var conf = require('byteballcore/conf.js');
 var myWitnesses = require('byteballcore/my_witnesses.js');
 
+function replaceConsoleLog(){
+	var clog = console.log;
+	console.log = function(){
+		Array.prototype.unshift.call(arguments, Date().toString()+':');
+		clog.apply(null, arguments);
+	}
+}
+
 function start(){
 	console.log('starting');
 	var network = require('byteballcore/network.js');
@@ -12,6 +20,7 @@ function start(){
 		});
 }
 
+replaceConsoleLog();
 myWitnesses.readMyWitnesses(function(arrWitnesses){
 	if (arrWitnesses.length > 0)
 		return start();
