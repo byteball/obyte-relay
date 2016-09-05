@@ -14,4 +14,4 @@ node start.js > log &
 ```
 ## Customize
 
-If you want to change any defaults, refer to the documentation of [byteballcore](../byteballcore), the core Byteball library `require()`'d from here.
+If you want to change any defaults, refer to the documentation of [byteballcore](../../../byteballcore), the core Byteball library `require()`'d from here.
