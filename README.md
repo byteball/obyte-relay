@@ -8,6 +8,8 @@ Install node.js, clone the repository, then say
 ```sh
 npm install
 ```
+If you want to accept incoming connections (you probably want), set up a proxy, such as nginx, to forward all websocket connections on a specific path to your daemon running the relay code.  See example configuration for nginx in [byteballcore](../../../byteballcore) documentation.
+
 ## Run
 ```sh
 node start.js > log &
