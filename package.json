@@ -1,27 +1,29 @@
 {
   "name": "byteball-relay",
-  "description": "Byteball Relay",
-  "author": "Byteball",
+  "description": "Obyte Relay",
+  "author": "Obyte",
   "version": "0.1.0",
   "main": "start.js",
   "keywords": [
     "relay",
+    "obyte",
     "byteball",
+    "DAG",
     "full node"
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/byteball/byteball-relay.git",
+    "url": "git://github.com/byteball/obyte-relay.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/byteball/byteball-relay/issues"
+    "url": "https://github.com/byteball/obyte-relay/issues"
   },
   "browser": {
     "request": "browser-request",
     "secp256k1": "secp256k1/js"
   },
   "dependencies": {
-    "byteballcore": "git+https://github.com/byteball/byteballcore.git"
+    "ocore": "git+https://github.com/byteball/ocore.git"
   }
 }
