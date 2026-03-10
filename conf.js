@@ -6,6 +6,7 @@ exports.port = 6611;
 exports.bServeAsHub = false;
 exports.bSaveJointJson = true;
 exports.bLight = false;
+exports.bDryRunNewTriggers = true;
 
 
 exports.storage = 'sqlite';
