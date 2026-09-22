@@ -11,6 +11,7 @@ if (require.main === module && !fs.existsSync(appDataDir) && fs.existsSync(path.
 }
 var conf = require('ocore/conf.js');
 var myWitnesses = require('ocore/my_witnesses.js');
+const eventBus = require('ocore/event_bus.js');
 
 function replaceConsoleLog(){
 	var clog = console.log;
@@ -24,8 +25,10 @@ function start(){
 	console.log('starting');
 	var network = require('ocore/network.js');
 	if (conf.initial_peers)
-		conf.initial_peers.forEach(function(url){
-			network.findOutboundPeerOrConnect(url);
+		eventBus.on('network_started', () => {
+			conf.initial_peers.forEach(function(url){
+				network.findOutboundPeerOrConnect(url);
+			});
 		});
 }
 

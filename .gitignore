@@ -38,3 +38,6 @@ Session.vim
 
 log
 .env
+
+package-lock.json
+yarn.lock
